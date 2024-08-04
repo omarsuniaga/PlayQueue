@@ -31,6 +31,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "72e9bc62-d448-45e1-8231-d9de6dd2b94d"
+      }
+    },
+    "owner": "omar_violin"
   }
 }

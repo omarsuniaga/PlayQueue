@@ -1,0 +1,100 @@
+Esto es una guia paso a paso para la implementacion de nuestra app
+
+INSTALACION DE LOS SERVICIOS
+
+- npm install -g expo-cli
+- npx create-expo-app playqueue
+- eas init --id 72e9bc62-d448-45e1-8231-d9de6dd2b94d
+
+
+PARA CREAR LA ARQUITECTURA BASADA EN COMPONENTES QUE ESTAREMOS USANDO, HEMOS GENERADO ESTE SCRIPT PARA SER EJECUTADO EN EL POWERSHEEL DE WINDOWS
+El Archivo debe ejecutarse un nivel arriba de la carpeta en cuestion 
+
+# Definir la estructura de directorios
+$directories = @(
+    "PlayQueue/assets/icons",
+    "PlayQueue/assets/splash",
+    "PlayQueue/src/components/Audio",
+    "PlayQueue/src/components/Song",
+    "PlayQueue/src/components/UI",
+    "PlayQueue/src/context",
+    "PlayQueue/src/hooks",
+    "PlayQueue/src/navigation",
+    "PlayQueue/src/screens",
+    "PlayQueue/src/services",
+    "PlayQueue/src/utils"
+)
+
+# Crear los directorios
+foreach ($dir in $directories) {
+    if (-not (Test-Path -Path $dir)) {
+        New-Item -ItemType Directory -Path $dir | Out-Null
+    }
+}
+
+# Crear archivos vacíos
+$files = @(
+    "PlayQueue/App.js",
+
+    "PlayQueue/assets/icons/adaptive-icon.png",
+    "PlayQueue/assets/icons/icon.png",
+    "PlayQueue/assets/splash/splash.png",
+
+    "PlayQueue/src/components/Audio/PlaybackControls.jsx",
+    "PlayQueue/src/components/Audio/VolumeBar.jsx",
+    "PlayQueue/src/components/Audio/TimeBar.jsx",
+    "PlayQueue/src/components/Audio/AudioController.jsx",
+
+    "PlayQueue/src/components/Song/SongInfo.jsx",
+    "PlayQueue/src/components/Song/Title.jsx",
+    "PlayQueue/src/components/Song/Ajustes.jsx",
+
+    "PlayQueue/src/components/UI/Button.jsx",
+    "PlayQueue/src/components/UI/SearchBar.jsx",
+
+    "PlayQueue/src/context/AudioProvider.js",
+
+    "PlayQueue/src/hooks/useAudio.js",
+
+    "PlayQueue/src/navigation/AppNavigator.jsx",
+    "PlayQueue/src/navigation/NavigationService.js",
+
+    "PlayQueue/src/screens/HomeScreen.jsx",
+    "PlayQueue/src/screens/QueueScreen.jsx",
+    "PlayQueue/src/screens/PlayerScreen.jsx",
+
+    "PlayQueue/src/services/audioService.js",
+    "PlayQueue/src/services/storageService.js",
+
+    "PlayQueue/src/utils/audioHelpers.js",
+    "PlayQueue/src/utils/timeHelpers.js"
+)
+
+# Crear los archivos
+foreach ($file in $files) {
+    if (-not (Test-Path -Path $file)) {
+        New-Item -ItemType File -Path $file | Out-Null
+    }
+}
+
+Write-Host "Estructura de directorios y archivos creada exitosamente."
+
+AHORA NECESITAMOS IMPLEMENTAR ALGUNOS PERMISOS TEMPORALES>>
+
+Ejecutar en el powershell:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Seleccionamos la opcion [A]
+
+.\create_structure.ps1
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Restricted
+
+Seleccionamos [A]
+
+PARA VER NUESTRA ESTRUCTURA AHORA>>
+- tree PlayQueue /F
+
+ABRIMOS NUESTRA APP
+- code .
+
