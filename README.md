@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+# PlayQueue
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+PlayQueue es una aplicación móvil desarrollada en React Native que permite a músicos gestionar y reproducir una cola de audio durante sus presentaciones en vivo. La aplicación está diseñada para facilitar la organización y reproducción de canciones, proporcionando una interfaz intuitiva y funcionalidades avanzadas como el manejo de playlists y el conteo de reproducciones.
 
-## Get started
+## Características
 
-1. Install dependencies
+- **Reproducción de Audio**: Soporte para formatos de audio como MP3 y WMA.
+- **Gestión de Cola**: Agrega, elimina y reordena canciones en la cola de reproducción.
+- **Control de Reproducción**: Incluye controles de reproducción como play, pause, stop, siguiente, y opciones de repetición.
+- **Historial de Reproducciones**: Contador de reproducciones para cada canción y un tablero para las más populares.
+- **Listas de Reproducción**: Crea y maneja playlists personalizadas.
+- **Visualización de Información**: Muestra el orden de las canciones, la duración total y calcula el tiempo de finalización.
+
+## Instalación
+
+Para comenzar a utilizar PlayQueue en tu entorno local, sigue los siguientes pasos:
+
+1. **Clonar el Repositorio**:
 
    ```bash
-   npm install
-   ```
+   git clone https://github.com/omarsuniaga/PlayQueue.git
+   cd PlayQueue
 
-2. Start the app
+## Uso
+### Una vez que la aplicación esté ejecutándose, podrás:
 
-   ```bash
-    npx expo start
-   ```
+Agregar canciones a la cola desde tu biblioteca de audio.
+Controlar la reproducción mediante los botones de la interfaz.
+Crear y administrar playlists.
+Ver estadísticas de reproducción para cada canción.
+Contribuciones
+Las contribuciones son bienvenidas. Para contribuir:
 
-In the output, you'll find options to open the app in a
+### Haz un fork del proyecto.
+Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+Realiza los cambios necesarios y realiza commits (git commit -m "Agrega nueva funcionalidad").
+Sube tus cambios a tu fork (git push origin feature/nueva-funcionalidad).
+Abre un Pull Request en el repositorio original.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Buenas Prácticas para el Archivo README
 
-## Get a fresh project
+1. **Claridad y Brevedad**: Asegúrate de que cada sección sea clara y directa al grano.
+2. **Estructura Lógica**: Sigue una estructura que cubra los aspectos clave: introducción, características, instalación, uso, contribuciones, y contacto.
+3. **Actualizaciones Regulares**: Mantén el README actualizado conforme el proyecto evoluciona.
+4. **Markdown Consistente**: Usa elementos de markdown (como encabezados, listas, y bloques de código) de manera consistente.
+5. **Enlaces Útiles**: Proporciona enlaces a herramientas relevantes, documentación, o páginas de soporte.
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
